@@ -34,12 +34,10 @@ async def import_catalog(
     imported = 0
 
     for quote in payload.quotes:
-        if "id" not in quote:
-            continue
         
-        quote_id = quote["id"]
+        quote_id = quote.id
 
-        state.quotes[quote_id] = quote
+        state.quotes[quote_id] = quote.model_dump()
 
         evict_if_needed()
 
