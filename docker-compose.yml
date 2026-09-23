@@ -1,0 +1,6 @@
+services:
+  quote-showcase:
+    build: .
+    container_name: quote-showcase
+    ports:
+      - "8000:8000"
