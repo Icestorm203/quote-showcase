@@ -90,6 +90,7 @@ app/
 
 requirements.txt
 Dockerfile
+docker-compose.yml
 README.md
 .gitignore
 ```
@@ -370,6 +371,26 @@ docker run -p 8000:8000 quote-showcase
 
 ```text
 http://127.0.0.1:8000/docs
+```
+
+## Запуск через Docker Compose
+
+Сборка и запуск:
+
+```bash
+docker compose up --build
+```
+
+После запуска приложение будет доступно по адресу:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+Остановка:
+
+```bash
+docker compose down
 ```
 
 ---
